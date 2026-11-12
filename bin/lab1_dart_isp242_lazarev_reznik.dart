@@ -145,3 +145,59 @@ void main() {
   }
 
 }
+
+
+// double average(List<int> grades) {
+//   if (grades.isEmpty) return 0;
+//   int sum = 0;
+//   for (var grade in grades) {
+//     sum += grade;
+//   }
+//   return sum / grades.length;
+// }
+
+// int maxGrade(List<int> grades) {
+//   int max = grades.first;
+//   for (var grade in grades) {
+//     if (grade > max) max = grade;
+//   }
+//   return max;
+// }
+
+// int minGrade(List<int> grades) {
+//   int min = grades.first;
+//   for (var grade in grades) {
+//     if (grade < min) min = grade;
+//   }
+//   return min;
+// }
+
+// String letterGrade(double avg) {
+//   if (avg >= 4.5) return 'Отлично';
+//   if (avg >= 3.5) return 'Хорошо';
+//   if (avg >= 2.5) return 'Удовлетворительно';
+//   return 'Неудовлетворительно';
+// }
+
+// void main() {
+//   Map<String, List<int>> students = {
+//     'Резник Анжелика': List.of([5, 5, 4, 5, 5]),
+//     'Лазарев Иван': List.of([4, 3, 4, 5, 4]),
+//     'Каменнова Софья': List.of([5, 4, 4, 5, 5]),
+//   };
+
+//   print('Анализатор оценок:');
+
+//   for (var name in students.keys) {
+//     List<int> marks = students[name]!;
+//     double avg = average(marks);
+//     int max = maxGrade(marks);
+//     int min = minGrade(marks);
+//     String res = letterGrade(avg);
+
+//     print('Студент: $name');
+//     print('Оценки: $marks');
+//     print('Средний балл: $avg ($res), макс: $max, мин: $min');
+//     print('');
+//   }
+// }
