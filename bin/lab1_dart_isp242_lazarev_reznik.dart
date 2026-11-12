@@ -5,7 +5,6 @@ String greet(String name) {
 String greet2(String name) => 'Hi, $name!';
 int square(int x) => x * x;
 double half(double x) => x / 2;
-int square2(int x) => x * x;
 
 void describePet({
   required String name,
@@ -24,27 +23,6 @@ String repeat(String text, [int times = 2]) {
 }
 
 void main() {
-  List<int> numbers2 = [3, 1, 4, 1, 5, 9];
-  numbers2.sort((a, b) => b - a);
-  print(numbers2);
-
-  List<String> names3 = ['Artem', 'Maria', 'Ivan'];
-  List<String> upper = names3.map((name3) => name3.toUpperCase()).toList();
-  print(upper);
-
-  print(greet('ivan'));
-  print(greet('lika'));
-  print(greet2('PAAPAP'));
-  print(square(6));
-  print(half(5));
-  print(square2(6));
-
-  describePet(name: 'barsik', age: 3);
-  describePet(name: 'sharik', species: 'dog');
-
-  print(repeat('ha'));
-  print(repeat('ha', 3));
-
   String name = 'апдвад';
   int age = 67;
   double height = 1.90;
@@ -70,6 +48,12 @@ void main() {
   if (city != null) {
     print(city.toUpperCase());
   }
+  print(city?.toUpperCase());
+
+  String? nickname = null;
+  String display = nickname ?? 'Аноним';
+  print(display);
+
   List<String> fruits = ['apple', 'banan', 'grusha'];
   fruits.add('orange');
   print(fruits[0]);
@@ -87,4 +71,35 @@ void main() {
   for (var fruit in fruits2) {
     print(fruit);
   }
+
+  print(greet('ivan'));
+  print(greet('lika'));
+  print(greet2('PAAPAP'));
+  print(square(6));
+  print(half(5));
+
+  describePet(name: 'barsik', age: 3);
+  describePet(name: 'sharik', species: 'dog');
+
+  print(repeat('ha'));
+  print(repeat('ha', 3));
+
+    List<int> numbers2 = [
+    3,
+    1,
+    4,
+    1,
+    5,
+    9,
+  ];
+
+  numbers2.sort((a, b) => b - a);
+  print(numbers2);
+
+  List<String> names3 = ['Artem', 'Maria', 'Ivan'];
+  List<String> upper = names3.map((name3) => name3.toUpperCase()).toList();
+  print(upper);
+
+  List<String> longNames = names3.where((name3) => name3.length > 4).toList();
+  print(longNames);
 }
